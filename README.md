@@ -37,7 +37,7 @@ Please refer to the very well written dataset section of [Monodepth](https://git
 The pretrained model can be download from [Google Drive](https://drive.google.com/drive/folders/1dWffc6XSyvxRO_89_jicT-cqJjHbd2-c?usp=sharing).
 
 ## 4. Citation
-
+Please condiser citing our paper if you find the code is useful for your projects:
 <pre>
 @inproceedings{pilzer2018unsupervised,
   title={Unsupervised Adversarial Depth Estimation using Cycled Generative Networks},
