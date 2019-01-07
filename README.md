@@ -38,7 +38,7 @@ Please refer to the very well written dataset section of [Monodepth](https://git
 
 ## 4. Citation
 
-'''
+<pre>
 @inproceedings{pilzer2018unsupervised,
   title={Unsupervised Adversarial Depth Estimation using Cycled Generative Networks},
   author={Pilzer, Andrea and Xu, Dan and Puscas, Mihai and Ricci, Elisa and Sebe, Nicu},
@@ -47,6 +47,6 @@ Please refer to the very well written dataset section of [Monodepth](https://git
   year={2018},
   organization={IEEE}
 }
-'''
+</pre>
 
 
