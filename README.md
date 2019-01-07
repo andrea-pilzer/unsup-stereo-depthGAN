@@ -30,7 +30,7 @@ python utils/evaluate_kitti.py --split kitti --predicted_disp_path my_model/disp
 
 ## 2. Datasets
 
-Please refer to the very well written dataset section of [Monodepth](https://github.com/mrharicot/monodepth/blob/master/readme.md)
+We used the KITTI dataset in our experiments. Please refer to a very well written dataset description section of [Monodepth](https://github.com/mrharicot/monodepth/blob/master/readme.md) for data preparation.
 
 ## 3. Trained model
 
