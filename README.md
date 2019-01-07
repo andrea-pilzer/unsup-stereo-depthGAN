@@ -10,22 +10,23 @@ This code was developed with Tensorflow 1.5 and Python2, we run experiments on a
 1. Training and testing
 
 Training
-'''
+```shell
 python main.py --dataset kitti --filenames_file utils/filenames/eigen_train_files_png.txt \
 --data_path /path/to/KITTI/ --do_stereo --train_branch b2a
-'''
+```
 
 Testing
-'''
+```shell
 python main.py --mode test --dataset kitti --filenames_file utils/filenames/eigen_test_files_png.txt \
 --data_path /path/to/KITTI/ --do_stereo --checkpoint_path my_model/model-5000
-'''
+```
+**Please note that there is NO extension after the checkpoint name**
 
 Evaluation
-'''
+```shell
 python utils/evaluate_kitti.py --split kitti --predicted_disp_path my_model/disparities.npy \
 --gt_path ~/data/KITTI/
-'''
+```
 
 2. Datasets
 
