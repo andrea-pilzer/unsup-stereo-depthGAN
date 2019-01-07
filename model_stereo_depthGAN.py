@@ -370,10 +370,13 @@ class stereo_depthGAN_Model(object):
             self.d_loss_right = (self.d_loss_right_real + self.d_loss_right_fake) / 2
             if self.branch == 'b2a':
                 self.d_loss = self.d_loss_left
+                self.d_loss_fake = self.d_loss_left_fake
             elif self.branch == 'a2b':
                 self.d_loss = self.d_loss_right
+                self.d_loss_fake = self.d_loss_right_fake
             else:
                 self.d_loss = self.d_loss_left + self.d_loss_right
+                self.d_loss_fake = self.d_loss_left_fake + self.d_loss_right_fake
 
             # LR CONSISTENCY
             self.lr_left_loss  = [tf.reduce_mean(tf.abs(self.right_to_left_disp[i] - self.disp_left_est[i]))  for i in range(4)]
@@ -386,7 +389,8 @@ class stereo_depthGAN_Model(object):
                 self.lr_loss = self.d_loss_left + self.d_loss_right
 
             # # TOTAL LOSS
-            self.total_loss = self.image_loss + 0.1 * self.cycle_loss + 0.1 * self.d_loss + 0.1 * self.lr_loss # + self.params.disp_gradient_loss_weight * self.disp_gradient_loss + self.params.lr_loss_weight * self.lr_loss
+            self.total_loss = self.image_loss + 0.1 * self.cycle_loss - 0.0001 * self.d_loss_fake + 0.1 * self.lr_loss # + self.params.disp_gradient_loss_weight * self.disp_gradient_loss + self.params.lr_loss_weight * self.lr_loss
+            self.discr_loss = 0.0001 * self.d_loss
 
     def build_summaries(self):
         # SUMMARIES
