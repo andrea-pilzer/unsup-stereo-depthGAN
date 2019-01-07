@@ -106,25 +106,25 @@ def train(params):
                     reuse_variables = True
 
                     if args.train_branch == 'a2b':
-                        grads_discrA = opt_step.compute_gradients(loss, model.discrA_vars)
-                        new_grads_discrA = [(g/10, v) for g, v in grads_discrA]
+                        grads_discrA = opt_step.compute_gradients(model.discr_loss, model.discrA_vars)
+                        new_grads_discrA = [(g*10, v) for g, v in grads_discrA]
                         grads_gen2b = opt_step.compute_gradients(loss, model.gen2b_vars)
                         grads_encoder = opt_step.compute_gradients(loss, model.encoder_vars)
 
                         grads = grads_gen2b + grads_encoder + new_grads_discrA
                     elif args.train_branch == 'b2a':
-                        grads_discrB = opt_step.compute_gradients(loss, model.discrB_vars)
-                        new_grads_discrB = [(g/10, v) for g, v in grads_discrB]
+                        grads_discrB = opt_step.compute_gradients(model.discr_loss, model.discrB_vars)
+                        new_grads_discrB = [(g*10, v) for g, v in grads_discrB]
                         grads_gen2a = opt_step.compute_gradients(loss, model.gen2a_vars)
                         grads_encoder = opt_step.compute_gradients(loss, model.encoder_vars)
 
                         grads = grads_gen2a + grads_encoder + new_grads_discrB
                     else:
-                        grads_discrA = opt_step.compute_gradients(loss, model.discrA_vars)
-                        new_grads_discrA = [(g/10, v) for g, v in grads_discrA]
+                        grads_discrA = opt_step.compute_gradients(model.discr_loss, model.discrA_vars)
+                        new_grads_discrA = [(g*10, v) for g, v in grads_discrA]
                         grads_gen2b = opt_step.compute_gradients(loss, model.gen2b_vars)
-                        grads_discrB = opt_step.compute_gradients(loss, model.discrB_vars)
-                        new_grads_discrB = [(g/10, v) for g, v in grads_discrB]
+                        grads_discrB = opt_step.compute_gradients(model.discr_loss, model.discrB_vars)
+                        new_grads_discrB = [(g*10, v) for g, v in grads_discrB]
                         grads_gen2a = opt_step.compute_gradients(loss, model.gen2a_vars)
                         grads_encoder = opt_step.compute_gradients(loss, model.encoder_vars)
 
