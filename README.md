@@ -34,7 +34,7 @@ We used the KITTI dataset in our experiments. Please refer to a very well writte
 
 ## 3. Trained model
 
-The pretrained model can be download from [Google Drive](https://drive.google.com/drive/folders/1dWffc6XSyvxRO_89_jicT-cqJjHbd2-c?usp=sharing).
+The pretrained model can be downloaded from [Google Drive](https://drive.google.com/drive/folders/1dWffc6XSyvxRO_89_jicT-cqJjHbd2-c?usp=sharing).
 
 ## 4. Citation
 Please condiser citing our paper if you find the code is useful for your projects:
