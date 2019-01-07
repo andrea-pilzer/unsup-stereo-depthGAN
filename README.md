@@ -7,7 +7,7 @@ By Andrea Pilzer, Dan Xu, Mihai Puscas, Elisa Ricci, Nicu Sebe
 
 This code was developed with Tensorflow 1.5 and Python2, we run experiments on a HPC server with Python 3.6 and Tensorflow 1.10.
 
-1. Training and testing
+## 1. Training and testing
 
 Training
 ```shell
@@ -28,15 +28,15 @@ python utils/evaluate_kitti.py --split kitti --predicted_disp_path my_model/disp
 --gt_path ~/data/KITTI/
 ```
 
-2. Datasets
+## 2. Datasets
 
 Please refer to the very well written dataset section of [Monodepth](https://github.com/mrharicot/monodepth/blob/master/readme.md)
 
-3. Trained model
+## 3. Trained model
 
 [Google Drive](https://drive.google.com/drive/folders/1dWffc6XSyvxRO_89_jicT-cqJjHbd2-c?usp=sharing)
 
-4. Citation
+## 4. Citation
 
 '''
 @inproceedings{pilzer2018unsupervised,
