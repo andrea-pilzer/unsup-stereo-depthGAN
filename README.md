@@ -5,7 +5,7 @@ By Andrea Pilzer, Dan Xu, Mihai Puscas, Elisa Ricci, Nicu Sebe
 
 # Content
 
-This code was developed with Tensorflow 1.5 and Python2, we run experiments on a HPC server with Python 3.6 and Tensorflow 1.10.
+The experiments are performed on a HPC server with Python 3.6 and Tensorflow 1.10.
 
 ## 1. Training and testing
 
