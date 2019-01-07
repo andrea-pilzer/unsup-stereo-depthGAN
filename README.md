@@ -34,7 +34,7 @@ Please refer to the very well written dataset section of [Monodepth](https://git
 
 ## 3. Trained model
 
-[Google Drive](https://drive.google.com/drive/folders/1dWffc6XSyvxRO_89_jicT-cqJjHbd2-c?usp=sharing)
+The pretrained model can be download from [Google Drive](https://drive.google.com/drive/folders/1dWffc6XSyvxRO_89_jicT-cqJjHbd2-c?usp=sharing).
 
 ## 4. Citation
 
