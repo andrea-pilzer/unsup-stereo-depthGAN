@@ -386,7 +386,7 @@ class stereo_depthGAN_Model(object):
             elif self.branch == 'a2b':
                 self.lr_loss = tf.add_n(self.lr_right_loss)
             else:
-                self.lr_loss = self.d_loss_left + self.d_loss_right
+                self.lr_loss = tf.add_n(self.lr_right_loss +self.lr_left_loss)
 
             # # TOTAL LOSS
             self.total_loss = self.image_loss + 0.1 * self.cycle_loss - 0.0001 * self.d_loss_fake + 0.1 * self.lr_loss # + self.params.disp_gradient_loss_weight * self.disp_gradient_loss + self.params.lr_loss_weight * self.lr_loss
