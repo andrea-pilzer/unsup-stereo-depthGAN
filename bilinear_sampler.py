@@ -4,7 +4,7 @@
 #
 # 3DV 2018 Conference, Verona, Italy
 #
-# parts of the code from
+# parts of the code from https://github.com/mrharicot/monodepth
 #
 # Copyright 2016 The TensorFlow Authors. All Rights Reserved.
 # Copyright 2017 Modifications Clement Godard.
