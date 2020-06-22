@@ -47,6 +47,15 @@ Please condiser citing our paper if you find the code is useful for your project
   year={2018},
   organization={IEEE}
 }
+
+@article{pilzer2019progressive,
+  title={Progressive Fusion for Unsupervised Binocular Depth Estimation using Cycled Networks},
+  author={Pilzer, Andrea and Lathuili{\`e}re, St{\'e}phane and Xu, Dan and Puscas, Mihai Marian and Ricci, Elisa and Sebe, Nicu},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2019},
+  publisher={IEEE}
+}
+
 </pre>
 
 
