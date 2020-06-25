@@ -1,7 +1,11 @@
-# unsup-stereo-depthGAN
+# Unsupervised Adversarial Depth Estimation using Cycled Generative Networks
 The code for "Unsupervised Adversarial Depth Estimation using Cycled Generative Networks" in 3DV2018  
 Paper link: https://arxiv.org/pdf/1807.10915.pdf  
 By Andrea Pilzer, Dan Xu, Mihai Puscas, Elisa Ricci, Nicu Sebe
+
+<p align="center">
+  <img src="framework.jpg" width="800"/>
+</p>
 
 # Content
 
