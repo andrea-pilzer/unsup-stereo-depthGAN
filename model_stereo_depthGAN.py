@@ -161,6 +161,12 @@ class stereo_depthGAN_Model(object):
         with tf.variable_scope(name):
             if reuse:
                 tf.get_variable_scope().reuse_variables()
+            elif reuse == False and self.reuse == True:
+                tf.get_variable_scope().reuse_variables()
+            elif reuse == True and self.reuse == False:
+                tf.get_variable_scope().reuse_variables()
+            elif reuse == False and self.reuse == False:
+                assert tf.get_variable_scope().reuse is False
             #set convenience functions
             conv   = self.conv
             if self.params.use_deconv:
@@ -189,6 +195,12 @@ class stereo_depthGAN_Model(object):
         with tf.variable_scope(name):
             if reuse:
                 tf.get_variable_scope().reuse_variables()
+            elif reuse == False and self.reuse == True:
+                tf.get_variable_scope().reuse_variables()
+            elif reuse == True and self.reuse == False:
+                tf.get_variable_scope().reuse_variables()
+            elif reuse == False and self.reuse == False:
+                assert tf.get_variable_scope().reuse is False
             #set convenience functions
             conv   = self.conv
             if self.params.use_deconv:
@@ -256,6 +268,14 @@ class stereo_depthGAN_Model(object):
     def fusion_func(self, net_input1, net_input2, name, reuse=False):
         with tf.variable_scope(name):
             conv = self.conv
+            if reuse:
+                tf.get_variable_scope().reuse_variables()
+            elif reuse == False and self.reuse == True:
+                tf.get_variable_scope().reuse_variables()
+            elif reuse == True and self.reuse == False:
+                tf.get_variable_scope().reuse_variables()
+            elif reuse == False and self.reuse == False:
+                assert tf.get_variable_scope().reuse is False
             if reuse:
                 tf.get_variable_scope().reuse_variables()
             input_fusion = tf.concat([net_input1, net_input2], 3)
